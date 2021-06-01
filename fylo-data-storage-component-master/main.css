@@ -1,0 +1,418 @@
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --PaleBlue: hsl(243, 100%, 93%);
+  --GrayishBlue: hsl(229, 7%, 55%);
+  --DarkBlue: hsl(228, 56%, 26%);
+  --VeryDarkBlue: #0c122c;
+  --Lightgray: rgb(207, 207, 207);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  background: url("images/bg-desktop.png") var(--VeryDarkBlue);
+  background-repeat: no-repeat;
+  background-size: 100vw 50vh;
+  background-position-y: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flyo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.fylo-box {
+  background-color: var(--DarkBlue);
+  padding: 3rem 2rem;
+  width: 20rem;
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+}
+
+.fylo-box .fylo-icons {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.fylo-box .fylo-icons .fylo-icon {
+  background-color: var(--VeryDarkBlue);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-right: 0.5rem;
+  border-radius: 10px;
+  width: 3rem;
+  height: 3rem;
+}
+
+.fylo-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--DarkBlue);
+  border-radius: 10px;
+  width: 40vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  /* IE*/
+}
+
+.fylo-bar .fylo-bar-text {
+  color: var(--GrayishBlue);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.fylo-bar .fylo-bar-text .fylo-bar-text-detail {
+  color: var(--Lightgray);
+}
+
+.fylo-bar .fylo-bar-progress {
+  margin: 1rem 0rem;
+}
+
+.fylo-bar .fylo-bar-progress .ranges {
+  margin-top: 0.5rem;
+  color: var(--Lightgray);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fylo-bar .fylo-gb-left {
+  position: absolute;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  bottom: 80%;
+  right: 5%;
+}
+
+.fylo-bar .fylo-gb-left h1 {
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--GrayishBlue);
+  position: relative;
+}
+
+.fylo-bar .fylo-gb-left h1 .gb-left {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  color: black;
+}
+
+.fylo-bar .fylo-gb-left h1:after {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1rem;
+  border-top: 20px solid transparent;
+  border-right: 20px solid white;
+  border-left: none;
+  border-bottom: 20px solid transparent;
+}
+
+.fylo-bar .slider {
+  border: none;
+  border-radius: 100px;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.7rem;
+  background: -webkit-gradient(linear, left top, right top, from(#FFA199), color-stop(50%, #FF7098), color-stop(50%, #0c122c), to(#0c122c));
+  background: linear-gradient(to right, #FFA199 0%, #FF7098 50%, #0c122c 50%, #0c122c 100%);
+  outline: none;
+}
+
+.fylo-bar .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.fylo-bar .slider::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.fylo-bar .slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.fylo-bar .slider::-moz-range-thumb:active {
+  cursor: grabbing;
+}
+
+.fylo-bar .slider::-moz-range-progress {
+  background-color: var(--SoftCyan);
+  height: 0.7rem;
+  border-radius: 100px;
+}
+
+.fylo-bar .slider::-moz-range-track {
+  background: var(--LightGrayishBlue);
+  height: 0.7rem;
+  border-radius: 100px;
+}
+
+.fylo-bar .slider::-ms-fill-lower {
+  background-color: var(--SoftCyan);
+  height: 0.7rem;
+  border-radius: 100px;
+}
+
+.fylo-bar .slider::-ms-fill-upper {
+  background: var(--LightGrayishBlue);
+  height: 0.7rem;
+  border-radius: 100px;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    min-height: 100vh;
+    width: 100vw;
+    background: url("images/bg-mobile.png") var(--VeryDarkBlue);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-position-y: 0vh;
+  }
+  .flyo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 5rem 0rem;
+  }
+  .fylo-box {
+    background-color: var(--DarkBlue);
+    padding: 3rem 2rem;
+    width: 85vw;
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+  }
+  .fylo-box .fylo-icons {
+    margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .fylo-box .fylo-icons .fylo-icon {
+    background-color: var(--VeryDarkBlue);
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+  }
+  .fylo-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--DarkBlue);
+    border-radius: 10px;
+    width: 85vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .fylo-bar .fylo-bar-text {
+    text-align: center;
+    color: var(--GrayishBlue);
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+  .fylo-bar .fylo-bar-text .fylo-bar-text-detail {
+    color: var(--Lightgray);
+  }
+  .fylo-bar .fylo-bar-progress {
+    margin: 1rem 0rem;
+  }
+  .fylo-bar .fylo-bar-progress .ranges {
+    margin-top: 0.5rem;
+    color: var(--Lightgray);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .fylo-bar .fylo-gb-left {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 0rem;
+    border-radius: 10px;
+    bottom: -25%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fylo-bar .fylo-gb-left h1 {
+    font-size: 0.7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: var(--GrayishBlue);
+    position: relative;
+  }
+  .fylo-bar .fylo-gb-left h1 .gb-left {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    color: black;
+  }
+  .fylo-bar .fylo-gb-left h1:after {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1rem;
+    border-top: 20px solid transparent;
+    border-right: 20px solid white;
+    border-left: none;
+    border-bottom: 20px solid transparent;
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

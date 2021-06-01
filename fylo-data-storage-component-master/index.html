@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <link rel="stylesheet" href="main.css">
+  
+</head>
+<body>
+
+<div class="container">
+  <div class="flyo-container">
+    <div class="fylo-box">
+      <div class="fylo-logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+      <div class="fylo-icons">
+        <div class="fylo-icon">
+          <img src="images/icon-document.svg" alt="document">
+        </div>
+        <div class="fylo-icon">
+          <img src="images/icon-folder.svg" alt="folder">
+        </div>
+        <div class="fylo-icon">
+          <img src="images/icon-upload.svg" alt="upload">
+        </div>
+      </div>
+    </div>
+    <div class="fylo-bar">
+      <h2 class="fylo-bar-text">You’ve used <span id="occupied" class="fylo-bar-text-detail">815 GB</span> of your storage</h2>
+      <div class="fylo-bar-progress">
+        <input type="range" min="1" max="1000" value="500" class="slider" id="range">
+        <div class="ranges">
+          <div class="range1">
+            0GB
+          </div>
+          <div class="range2">
+            1000GB
+          </div>
+        </div>
+      </div>
+      <div class="fylo-gb-left">
+       <h1><span class="gb-left" id="left">185</span> GB LEFT</h1> 
+      </div>
+    </div>
+  </div>
+  
+</div>
+  <!-- You’ve used 815 GB of your storage
+
+  185 GB Left
+  
+  0 GB
+  1000 GB -->
+  <script src="index.js"></script>
+</body>
+</html>
